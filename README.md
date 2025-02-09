@@ -15,6 +15,16 @@ Este projeto utiliza o **Serverless Framework v4** para o desenvolvimento e exec
 ```sh
 npm install
 ```
+Comando para clonar este repositório diretamente com o npx:
+
+```sh
+npx be-serverless-ts
+```
+ou utilize a flag --install para já instalar todas as dependências
+
+```sh
+npx be-serverless-ts --install
+```
 
 ### 3️⃣ Executar Localmente com Serverless Offline
 
