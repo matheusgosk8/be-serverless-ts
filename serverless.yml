@@ -1,0 +1,26 @@
+service: levis-be
+frameworkVersion: '4'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: sa-east-1
+functions:
+  get:
+    handler: 'src/get/get.handler'
+    events:
+      - http:
+          path: api/get
+          method: get
+  post:
+    handler: 'src/post/post.handler'
+    events:
+      - http:
+          path: api/post
+          method: post
+plugins:
+  - serverless-offline
+package:
+  patterns:
+    - '!src/_tests_/**'
+resources:
